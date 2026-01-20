@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 35 25% 95%;
+    --foreground: 174 44% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 174 44% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 174 44% 15%;
+
+    --primary: 174 44% 42%;
+    --primary-foreground: 35 25% 95%;
+
+    --secondary: 28 80% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 35 8% 45%;
+
+    --accent: 11 75% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 174 44% 42%;
+
+    --radius: 1rem;
+    
+    /* Custom food app colors */
+    --teal-light: 174 44% 85%;
+    --coral: 11 75% 61%;
+    --peach: 28 80% 70%;
+    --cream: 35 25% 95%;
+    --warm-white: 35 30% 98%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 174 44% 15%;
+    --foreground: 35 25% 95%;
+
+    --card: 174 35% 20%;
+    --card-foreground: 35 25% 95%;
+
+    --popover: 174 35% 20%;
+    --popover-foreground: 35 25% 95%;
+
+    --primary: 174 44% 55%;
+    --primary-foreground: 174 44% 15%;
+
+    --secondary: 28 80% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 174 20% 25%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 11 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 174 20% 30%;
+    --input: 174 20% 30%;
+    --ring: 174 44% 55%;
+    
+    --sidebar-background: 174 44% 15%;
+    --sidebar-foreground: 35 25% 95%;
+    --sidebar-primary: 174 44% 55%;
+    --sidebar-primary-foreground: 174 44% 15%;
+    --sidebar-accent: 174 20% 25%;
+    --sidebar-accent-foreground: 35 25% 95%;
+    --sidebar-border: 174 20% 30%;
+    --sidebar-ring: 174 44% 55%;
+    
+    --teal-light: 174 44% 35%;
+    --coral: 11 75% 55%;
+    --peach: 28 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .torn-edge {
+    position: relative;
+  }
+  
+  .torn-edge::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 L1200,10 L1200,20 L0,20 Z' fill='%23F4F1E8'/%3E%3C/svg%3E") repeat-x;
+    background-size: 60px 20px;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
