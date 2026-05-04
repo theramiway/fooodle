@@ -1,3 +1,4 @@
+#A dedicated campus cafeteria management app designed to optimize the student dining experience. It reduces wait times by allowing students to browse daily menus, place pre-orders, and manage payments directly from their phones, ensuring the college canteen runs efficiently.
 
 # Step 1: Clone the repository using the project's Git URL.
 git clone <https://github.com/theramiway/fooodle>
